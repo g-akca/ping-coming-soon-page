@@ -3,7 +3,7 @@ import logoImg from "/images/logo.svg";
 
 function MainSection() {
   return (
-    <main className="flex flex-col gap-18 tablet:gap-24 max-w-182">
+    <main className="flex flex-col gap-18 tablet:gap-24 max-w-160">
       <div className="px-4.5 tablet:px-0.5 flex flex-col gap-10">
         <div className="flex flex-col gap-10 tablet:gap-12 items-center">
           <img src={logoImg} alt="Logo image" className="h-4 tablet:h-6" />
