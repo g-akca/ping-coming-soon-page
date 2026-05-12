@@ -4,7 +4,7 @@ import logoImg from "/images/logo.svg";
 
 function MainSection() {
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
 
   function validateEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -14,10 +14,10 @@ function MainSection() {
     e.preventDefault();
 
     if (!validateEmail(email)) {
-      setError(true);
+      email.trim() === "" ? setError("Whoops! It looks like you forgot to add your email") : setError("Please provide a valid email address");
     }
     else {
-      setError(false);
+      setError("");
     }
   }
 
@@ -50,7 +50,7 @@ function MainSection() {
             />
 
             {error && (
-              <p className="mb-4 text-center text-red-400 text-[10px] leading-base italic tablet:mb-0 tablet:pl-8 tablet:text-[12px] tablet:text-start">Please provide a valid email address</p>
+              <p className="mb-4 text-center text-red-400 text-[10px] leading-base italic tablet:mb-0 tablet:pl-8 tablet:text-[12px] tablet:text-start">{error}</p>
             )}
           </div>
 
