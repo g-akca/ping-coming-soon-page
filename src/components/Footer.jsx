@@ -3,7 +3,7 @@ import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-sv
 
 function Footer() {
   return (
-    <footer className="self-center flex flex-col gap-6 items-center">
+    <footer className="flex flex-col gap-6 items-center">
       <div className="flex gap-4">
         <SocialMediaButton icon={faFacebookF} />
         <SocialMediaButton icon={faTwitter} />

@@ -3,31 +3,42 @@ import logoImg from "/images/logo.svg";
 
 function MainSection() {
   return (
-    <main className="flex flex-col gap-18">
-      <div className="px-2 flex flex-col gap-10">
-        <div className="flex flex-col gap-10 items-center">
-          <img src={logoImg} alt="Logo image" className="h-4" />
+    <main className="flex flex-col gap-18 tablet:gap-24 max-w-182">
+      <div className="px-4.5 tablet:px-0.5 flex flex-col gap-10">
+        <div className="flex flex-col gap-10 tablet:gap-12 items-center">
+          <img src={logoImg} alt="Logo image" className="h-4 tablet:h-6" />
 
-          <div className="flex flex-col gap-2 text-center font-light">
-            <h2 className="text-gray-400">We are launching <strong className="text-blue-950 font-bold">soon!</strong></h2>
+          <div className="flex flex-col gap-2 tablet:gap-4 text-center font-light">
+            <h2 className="text-gray-400 tablet:text-[48px] leading-base">We are launching <strong className="text-blue-950 font-bold">soon!</strong></h2>
 
-            <p className="text-[12px] leading-base">Subscribe and get notified</p>
+            <p className="text-[12px] leading-base tablet:text-base">Subscribe and get notified</p>
           </div>
         </div>
 
-        <form className="px-2.5 flex flex-col gap-2">
-          <input type="text" placeholder="Your email address..." className="rounded-[28px] h-10 px-6 border-blue-200 border shadow-[0_0_7px_rgba(0,0,0,0.01)] text-[12px] leading-base font-light placeholder:text-blue-200" />
+        <form className="flex flex-col gap-2 tablet:flex-row tablet:gap-4">
+          <input 
+            type="text" 
+            placeholder="Your email address..." 
+            className="
+              rounded-[28px] h-10 px-6 border-blue-200 border shadow-[0_0_7px_rgba(0,0,0,0.01)] 
+              text-[12px] leading-base font-light placeholder:text-blue-200 
+              tablet:grow tablet:h-14 tablet:px-8 tablet:text-[16px]
+            " 
+          />
 
           <button 
             type="submit" 
-            className="bg-blue-500 rounded-[28px] h-10 text-center text-white text-[12px] leading-base font-semibold shadow-[0_5px_10px_rgba(76,123,243,0.23)]"
+            className="
+              bg-blue-500 rounded-[28px] h-10 text-center text-white text-[12px] leading-base font-semibold 
+              shadow-[0_5px_10px_rgba(76,123,243,0.23)] tablet:w-50 tablet:h-14 tablet:text-[16px]
+            "
           >
               Notify Me
           </button>
         </form>
       </div>
 
-      <img src={dashboardImg} alt="Dashboard illustration" />
+      <img src={dashboardImg} alt="Dashboard illustration" className="self-center w-full" />
     </main>
   )
 }
