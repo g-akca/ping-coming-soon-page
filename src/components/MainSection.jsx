@@ -21,8 +21,8 @@ function MainSection() {
             placeholder="Your email address..." 
             className="
               rounded-[28px] h-10 px-6 border-blue-200 border shadow-[0_0_7px_rgba(0,0,0,0.01)] 
-              text-[12px] leading-base font-light placeholder:text-blue-200 
-              tablet:grow tablet:h-14 tablet:px-8 tablet:text-[16px]
+              text-[12px] text-blue-950 leading-base font-light placeholder:text-blue-200 
+              tablet:grow tablet:h-14 tablet:px-8 tablet:text-[16px] transition-all duration-300 focus:outline-none focus:border-blue-500
             " 
           />
 
@@ -30,7 +30,8 @@ function MainSection() {
             type="submit" 
             className="
               bg-blue-500 rounded-[28px] h-10 text-center text-white text-[12px] leading-base font-semibold 
-              shadow-[0_5px_10px_rgba(76,123,243,0.23)] tablet:w-50 tablet:h-14 tablet:text-[16px]
+              shadow-[0_5px_10px_rgba(76,123,243,0.23)] tablet:w-50 tablet:h-14 tablet:text-[16px] cursor-pointer
+              hover:opacity-75 transition-all duration-300
             "
           >
               Notify Me
