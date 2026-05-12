@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="text-base leading-base pt-21">
+    <div className="text-base leading-base min-h-screen pt-21 flex flex-col justify-between gap-6">
       <MainSection />
 
       <Footer />
