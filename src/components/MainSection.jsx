@@ -1,7 +1,26 @@
+import { useState } from "react";
 import dashboardImg from "/images/illustration-dashboard.png";
 import logoImg from "/images/logo.svg";
 
 function MainSection() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
+
+  function validateEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setError(true);
+    }
+    else {
+      setError(false);
+    }
+  }
+
   return (
     <main className="flex flex-col gap-18 tablet:gap-24 max-w-160">
       <div className="px-4.5 tablet:px-0.5 flex flex-col gap-10">
@@ -15,16 +34,25 @@ function MainSection() {
           </div>
         </div>
 
-        <form className="flex flex-col gap-2 tablet:flex-row tablet:gap-4">
-          <input 
-            type="text" 
-            placeholder="Your email address..." 
-            className="
-              rounded-[28px] h-10 px-6 border-blue-200 border shadow-[0_0_7px_rgba(0,0,0,0.01)] 
-              text-[12px] text-blue-950 leading-base font-light placeholder:text-blue-200 
-              tablet:grow tablet:h-14 tablet:px-8 tablet:text-[16px] transition-all duration-300 focus:outline-none focus:border-blue-500
-            " 
-          />
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2 tablet:flex-row tablet:gap-4">
+          <div className="tablet:grow flex flex-col gap-2">
+            <input 
+              type="text" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your email address..." 
+              className={`
+                rounded-[28px] h-10 px-6 border-blue-200 border shadow-[0_0_7px_rgba(0,0,0,0.01)] 
+                text-[12px] text-blue-950 leading-base font-light placeholder:text-blue-200
+                tablet:h-14 tablet:px-8 tablet:text-[16px] transition-all duration-300 focus:outline-none focus:border-blue-500
+                ${error && "border-red-400 focus:border-red-400"}
+              `}
+            />
+
+            {error && (
+              <p className="mb-4 text-center text-red-400 text-[10px] leading-base italic tablet:mb-0 tablet:pl-8 tablet:text-[12px] tablet:text-start">Please provide a valid email address</p>
+            )}
+          </div>
 
           <button 
             type="submit" 
