@@ -28,7 +28,7 @@ function MainSection() {
           <img src={logoImg} alt="Ping" className="h-4 tablet:h-6" />
 
           <div className="flex flex-col gap-2 tablet:gap-4 text-center font-light">
-            <h2 className="text-gray-400 tablet:text-[48px] leading-base">We are launching <strong className="text-blue-950 font-bold">soon!</strong></h2>
+            <h1 className="text-gray-400 tablet:text-[48px] leading-base">We are launching <strong className="text-blue-950 font-bold">soon!</strong></h1>
 
             <p className="text-[12px] leading-base tablet:text-base">Subscribe and get notified</p>
           </div>
@@ -62,7 +62,7 @@ function MainSection() {
               hover:opacity-75 transition-all duration-300
             "
           >
-              Notify Me
+            Notify Me
           </button>
         </form>
       </div>
