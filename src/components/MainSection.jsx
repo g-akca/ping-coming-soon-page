@@ -34,7 +34,11 @@ function MainSection() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2 tablet:flex-row tablet:gap-4">
+        <form 
+          onSubmit={handleSubmit} 
+          noValidate 
+          className="flex flex-col gap-2 tablet:flex-row tablet:gap-4"
+        >
           <div className="tablet:grow flex flex-col gap-2">
             <label htmlFor="email" className="sr-only">Email address</label>
             <input 
