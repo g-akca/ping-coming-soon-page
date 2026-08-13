@@ -25,7 +25,7 @@ function MainSection() {
     <main className="flex flex-col gap-18 tablet:gap-24 max-w-160">
       <div className="px-4.5 tablet:px-0.5 flex flex-col gap-10">
         <div className="flex flex-col gap-10 tablet:gap-12 items-center">
-          <img src={logoImg} alt="Logo image" className="h-4 tablet:h-6" />
+          <img src={logoImg} alt="Ping" className="h-4 tablet:h-6" />
 
           <div className="flex flex-col gap-2 tablet:gap-4 text-center font-light">
             <h2 className="text-gray-400 tablet:text-[48px] leading-base">We are launching <strong className="text-blue-950 font-bold">soon!</strong></h2>
