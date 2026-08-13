@@ -44,6 +44,7 @@ function MainSection() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address..." 
               aria-describedby={error ? "email-error" : undefined}
+              aria-invalid={Boolean(error)}
               className={`
                 rounded-[28px] h-10 px-6 border-blue-200 border shadow-[0_0_7px_rgba(0,0,0,0.01)] 
                 text-[12px] text-blue-950 leading-base font-light placeholder:text-blue-200
@@ -53,7 +54,7 @@ function MainSection() {
             />
 
             {error && (
-              <p id="email-error" className="mb-4 text-center text-red-400 text-[10px] leading-base italic tablet:mb-0 tablet:pl-8 tablet:text-[12px] tablet:text-start">{error}</p>
+              <p id="email-error" role="alert" className="mb-4 text-center text-red-400 text-[10px] leading-base italic tablet:mb-0 tablet:pl-8 tablet:text-[12px] tablet:text-start">{error}</p>
             )}
           </div>
 
